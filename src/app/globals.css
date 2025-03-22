@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --primary: #97afde;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fff;
+    --foreground: rgba(151, 175, 222, 0.897);
+  }
+}
+
+body {
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gallery-item {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  opacity: 0.9;
+}
+
+.gallery-item img {
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.02);
+}
+
+.top-img {
+  background-image: url("/topLanding.jpg");
+  min-height: 680px;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 52px;
+  padding-left: 52px;
+}
+
+.car-bg-main-1 {
+  background-image: url("/lycan-hypersport-concept-isolated-white-background.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.sec-main-2 {
+  background-image: url("/Frame1707482084.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.box-category li {
+  cursor: pointer;
+}
+
+.shadow-custom {
+  box-shadow: 0px 9px 11px 0px rgba(67, 88, 130, 0.5);
+}
+
+.box-login {
+  background-image: url("/lycan-hypersport-concept-isolated-white-background4.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.about-header {
+  background-image: url("/lycan-hypersport-concept-isolated-white-background2.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+.about-footer {
+  background-image: url("/lycan-hypersport-concept-isolated-white-background3.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
+}
+
+.ul-feat li {
+  display: flex;
+  gap: 3px;
+  font-size: 14px;
+  color: #151413;
+}
+
+.company-header {
+  background-image: url("/Rectangle3137.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 260px;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+}
+
+
+.text-secondary {
+  color: #9c27b0; 
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.box-category li:hover {
+  color: #9c27b0;
+}
