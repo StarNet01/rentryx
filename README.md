@@ -1,90 +1,116 @@
-# پروژه فرانت‌اند اجاره خودرو
+# 🚘 Rent Ryx – Car Rental Frontend Project
 
-این پروژه یک سیستم وب‌سایت اجاره خودرو است که با فریم‌ورک Next.js و Material UI پیاده‌سازی شده است.
+**Rent Ryx** is a modern and responsive car rental website built with **Next.js**, **TypeScript**, and **Material UI**. This repository contains the frontend codebase for the **Rent Ryx** platform, enabling users to search and rent vehicles based on flexible filters such as date, time, location, and vehicle features.
+> If you're searching for **Rent Ryx source code**, you're in the right place!
 
-## ویژگی‌های اصلی
+---
 
-- صفحه اصلی با فیلتر جستجو براساس تاریخ و زمان
-- صفحه نمایش خودروها با قابلیت فیلترینگ
-- سیستم URLParams برای حفظ وضعیت فیلترها
-- ساپورت از ماک دیتا برای توسعه بدون وابستگی به بک‌اند
-- طراحی واکنش‌گرا (Responsive)
+## 🔥 Why Rent Ryx?
 
-## ساختار پروژه
+Rent Ryx offers a sleek, fast, and mobile-friendly interface for browsing and renting vehicles. Whether you're a traveler, a developer, or a company looking to extend a car rental system, this project serves as a solid base to build upon.
+
+---
+
+## 🚗 Key Features of Rent Ryx
+
+- 🗓️ Search filters based on date & time  
+- 🚘 Vehicle listing page with powerful filtering  
+- 🔗 URLParams support to retain filter states  
+- 🧪 Mock data support for backend-independent development  
+- 📱 Fully responsive design with mobile-first UX
+
+---
+
+## 📁 Project Structure
+
+
 
 ```
 src/
-├── app/                    # مسیرهای اصلی برنامه (routing)
-│   ├── cars/               # صفحه نمایش خودروها با فیلترینگ
-│   │   ├── detail/         # صفحه جزئیات خودرو
-│   │   └── page.tsx        # صفحه اصلی خودروها
-│   └── page.tsx            # صفحه اصلی وب‌سایت
-├── modules/                # ماژول‌های برنامه
-│   ├── landing/            # کامپوننت‌های صفحه اصلی
-│   │   ├── components/     # کامپوننت‌های مشترک صفحه اصلی
-│   │   ├── layouts/        # لایه‌های مشترک مانند هدر و فوتر
-│   │   └── pages/          # صفحات مربوط به بخش عمومی
-│   └── share/              # کامپوننت‌ها و سرویس‌های مشترک
-│       ├── hooks/          # هوک‌های مورد استفاده در برنامه
-│       └── services/       # سرویس‌های ارتباط با API
+├── app/                      # Main app routing
+│   ├── cars/                # Car listing page with filtering
+│   │   ├── detail/         # Car detail page
+│   │   └── page.tsx         # Main cars page
+│   └── page.tsx            # Home page
+├── modules/                # Application modules
+│   ├── landing/           # Components for the landing/home page
+│   │   ├── components/    # Shared components for the landing page
+│   │   ├── layouts/         # Shared layouts like header and footer
+│   │   └── pages/           # Pages for public sections
+│   └── share/             # Shared components and services
+│       ├── hooks/         # Custom hooks used in the app
+│       └── services/       # API communication services
 ```
 
-## ساختار API
 
-API های زیر برای ارتباط با بک‌اند پیش‌بینی شده‌اند:
+---
 
-### دریافت لیست خودروها با فیلتر
+## 🔗 API Structure
+
+The following APIs are planned for backend integration:
+
+### 📄 Get Car List with Filters
+These endpoints are designed for backend integration with Rent Ryx:
 
 **Endpoint:** `GET /cars`
 
-**پارامترهای موجود:**
+**Query Parameters:**
 
-- `pickUpDate`: تاریخ تحویل خودرو (YYYY-MM-DD)
-- `dropOffDate`: تاریخ برگشت خودرو (YYYY-MM-DD)
-- `pickUpTime`: زمان تحویل خودرو (HH:MM)
-- `dropOffTime`: زمان برگشت خودرو (HH:MM)
-- `location`: موقعیت جغرافیایی
-- `vehicleType`: نوع خودرو
-- `color`: رنگ خودرو
-- `passengers`: حداقل تعداد سرنشین
-- `transmission`: نوع گیربکس
-- `minPrice`: حداقل قیمت
-- `maxPrice`: حداکثر قیمت
-- `page`: شماره صفحه (پیش‌فرض: 1)
-- `limit`: تعداد آیتم در هر صفحه (پیش‌فرض: 10)
+- `pickUpDate`: Car pickup date (YYYY-MM-DD)  
+- `dropOffDate`: Car return date (YYYY-MM-DD)  
+- `pickUpTime`: Car pickup time (HH:MM)  
+- `dropOffTime`: Car return time (HH:MM)  
+- `location`: Geographical location  
+- `vehicleType`: Type of vehicle  
+- `color`: Car color  
+- `passengers`: Minimum number of passengers  
+- `transmission`: Transmission type  
+- `minPrice`: Minimum price  
+- `maxPrice`: Maximum price  
+- `page`: Page number (default: 1)  
+- `limit`: Items per page (default: 10)
 
-### دریافت جزئیات یک خودرو
+---
+
+### 📄 Get Car Details
 
 **Endpoint:** `GET /cars/:id`
 
-## نحوه اجرا
+---
 
-1. ابتدا وابستگی‌ها را نصب کنید:
+## 🛠 How to Run
+
+1. Install dependencies:
 
 ```bash
 npm install
-```
+Start the development server:
 
-2. سپس برنامه را اجرا کنید:
-
-```bash
+bash
+Copy
+Edit
 npm run dev
-```
+Open http://localhost:3000 in your browser.
 
-3. برنامه در آدرس `http://localhost:3000` قابل دسترس خواهد بود.
+🧑‍💻 Development Notes
+To implement the backend, follow the API structure described above.
 
-## نکات توسعه
+Until the real API is ready, the app uses the getMockCars method in carsService.
 
-- برای ایجاد بک‌اند، API را مطابق مستندات بالا پیاده‌سازی کنید.
-- تا زمانی که API اصلی پیاده‌سازی نشده است، از متد `getMockCars` در سرویس `carsService` استفاده شده است.
-- برای تغییر بین داده‌های واقعی و تستی، کافی است فراخوانی `carsService.getMockCars` را به `carsService.getCars` تغییر دهید.
+You can switch between real and mock data by changing the call from carsService.getMockCars to carsService.getCars.
 
-## تکنولوژی‌های استفاده شده
+🧰 Technologies Used
+Next.js
 
-- Next.js
-- React
-- TypeScript
-- Material UI
-- TailwindCSS
-- dayjs
-- Leaflet (برای نقشه)
+React
+
+TypeScript
+
+Material UI
+
+TailwindCSS
+
+dayjs
+
+Leaflet (for maps)
+
