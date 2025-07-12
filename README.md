@@ -1,17 +1,17 @@
-# 🚘 Rent Ryx – Car Rental Frontend Project
+# 🚘 Rentryx – Car Rental Frontend Project
 
-**Rent Ryx** is a modern and responsive car rental website built with **Next.js**, **TypeScript**, and **Material UI**. This repository contains the frontend codebase for the **Rent Ryx** platform, enabling users to search and rent vehicles based on flexible filters such as date, time, location, and vehicle features.
-> If you're searching for **Rent Ryx source code**, you're in the right place!
-
----
-
-## 🔥 Why Rent Ryx?
-
-Rent Ryx offers a sleek, fast, and mobile-friendly interface for browsing and renting vehicles. Whether you're a traveler, a developer, or a company looking to extend a car rental system, this project serves as a solid base to build upon.
+**Rentryx** is a modern and responsive car rental website built with **Next.js**, **TypeScript**, and **Material UI**. This repository contains the frontend codebase for the **Rentryx** platform, enabling users to search and rent vehicles based on flexible filters such as date, time, location, and vehicle features.
+> If you're searching for **Rentryx source code**, you're in the right place!
 
 ---
 
-## 🚗 Key Features of Rent Ryx
+## 🔥 Why Rentryx?
+
+Rentryx offers a sleek, fast, and mobile-friendly interface for browsing and renting vehicles. Whether you're a traveler, a developer, or a company looking to extend a car rental system, this project serves as a solid base to build upon.
+
+---
+
+## 🚗 Key Features of Rentryx
 
 - 🗓️ Search filters based on date & time  
 - 🚘 Vehicle listing page with powerful filtering  
@@ -50,7 +50,7 @@ src/
 The following APIs are planned for backend integration:
 
 ### 📄 Get Car List with Filters
-These endpoints are designed for backend integration with Rent Ryx:
+These endpoints are designed for backend integration with Rentryx:
 
 **Endpoint:** `GET /cars`
 
