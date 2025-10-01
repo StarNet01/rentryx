@@ -8,14 +8,14 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
 
   useEffect(() => {
     if (
-      !isAuthenticated
+      false
       // || !allowedRoles.includes(user?.role)
     ) {
       router.push("/auth/login");
     }
   }, [isAuthenticated, user, router]);
 
-  return isAuthenticated ? children : null;
+  return true ? children : null;
 };
 
 export default ProtectedRoute;
